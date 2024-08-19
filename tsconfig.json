@@ -2,7 +2,7 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "module": "es2020",
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "target": "es2020",
     "esModuleInterop": true,
     "baseUrl": ".",
