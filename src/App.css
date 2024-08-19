@@ -1,0 +1,8 @@
+.new-scroll::-webkit-scrollbar {
+    width: 8px;
+  }
+   
+  
+  .new-scroll::-webkit-scrollbar-thumb {
+    @apply bg-sky-300 rounded-sm  
+  }
