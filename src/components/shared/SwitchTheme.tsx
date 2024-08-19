@@ -14,7 +14,7 @@ const SwitchTheme = (className: { className?: string }) => {
       <input
         defaultChecked={theme === "dark"}
         className="sr-only peer"
-        value={theme}
+        value={theme === "dark" ? "dark" : "light"}
         onChange={() => setTheme(theme === "dark" ? "light" : "dark")}
         type="checkbox"
       />
