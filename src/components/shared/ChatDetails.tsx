@@ -216,6 +216,23 @@ const ChatDetails = ({ className, currentChat }: ChatDetailsProps) => {
   }, [messages]);
   const inputRef = useRef<HTMLInputElement>(null);
 
+  // handle hit enter to send message
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Enter") {
+        handleSendMessage("Text");
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    // Remove event listener
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  });
+
   return (
     <section className={cn("py-2 gap-3 w-full  grid grid-rows-10", className)}>
       {/* Info */}
