@@ -84,6 +84,8 @@ const LoginHandler = ({ className }: { className?: string }) => {
       email: auth.email,
       name: auth.displayName,
       photoURL: auth.photoURL,
+      blockList: [],
+      blockBy: [],
     });
 
     // if not create a new user

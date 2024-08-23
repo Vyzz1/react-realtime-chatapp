@@ -63,10 +63,10 @@ const ChatDetails = ({ className, currentChat }: ChatDetailsProps) => {
   const [blockedBy, setBlockedBy] = useState<string[]>([]);
 
   // Check if user is blocked
-  const isBlocked = blockList.includes(currentChat?.user?.uid);
+  const isBlocked = blockList?.includes(currentChat?.user?.uid);
 
   // Check if user is being blocked
-  const isBeingBlocked = blockedBy.includes(currentChat?.user?.uid);
+  const isBeingBlocked = blockedBy?.includes(currentChat?.user?.uid);
 
   // Check if user is disabled
   const isDisabled = isBlocked || isBeingBlocked || loading;
