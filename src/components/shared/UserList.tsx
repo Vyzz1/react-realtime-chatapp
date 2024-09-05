@@ -59,7 +59,7 @@ const UserList = ({
     if (chatRooms && chatRooms.length > 0) {
       const regex = RegExp(debouncedSearch, "i");
       const filtered = chatRooms.filter(
-        (v) => regex.test(v.user.name) || regex.test(v.lastMessage)
+        (v) => regex.test(v.user?.name) || regex.test(v.lastMessage)
       );
       setFilteredRooms(filtered);
     }
@@ -90,13 +90,13 @@ const UserList = ({
               className="flex cursor-pointer border-zinc-200 border-b  items-center gap-x-2 px-2 py-4"
             >
               <img
-                src={v.user.photoURL}
+                src={v.user?.photoURL}
                 alt="User"
                 className="rounded-full object-contain size-12"
               />
               <div className="space-y- inline-block overflow-hidden">
                 <h4 className="text-lg font-semibold text-slate-800 dark:text-white">
-                  {v.user.name}
+                  {v.user?.name || "Error"}
                 </h4>
                 <p
                   className={clsx(
